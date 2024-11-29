@@ -1,0 +1,11 @@
+{
+    "tasks": {
+        "clean": "rm -rf ./build/*; rm -rf ./lib/*",
+        "compile": "./compile.sh",
+        "test": "deno test --allow-ffi ./source/library/main_test.ts",
+        "check": "deno task clean; deno task compile && deno task test"
+    },
+    "imports": {
+        "@std/assert": "jsr:@std/assert@1"
+    }
+}
